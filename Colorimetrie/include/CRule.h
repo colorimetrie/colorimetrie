@@ -9,8 +9,8 @@
 #pragma once
 
 #include "cinder/Color.h"
-#include "Cairo.h"
 #include "CColor.h"
+#include <CoreGraphics/CoreGraphics.h>
 
 namespace colorimetrie {
     
@@ -33,7 +33,7 @@ public:
 
     CRule();
     virtual void apply(CShape * shape) const = 0;
-    void applyStyle(ci::cairo::Context &ctx);
+    void applyStyle( CGContextRef ctx);
 };
     
 class CRule1 : public CRule {

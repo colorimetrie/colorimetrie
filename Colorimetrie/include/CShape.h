@@ -13,8 +13,8 @@
 #include "CColorGroup.h"
 #include "cinder/Vector.h"
 #include "cinder/Color.h"
-#include "cinder/cairo/Cairo.h"
 #include "cinder/Path2d.h"
+#include <CoreGraphics/CoreGraphics.h>
 
 #include "CRule.h"
 
@@ -65,8 +65,8 @@ namespace colorimetrie {
         void resetBaseColor(const RGBcolor& rbgCol);
 		void swapToInterpolated();
 		void animate(const CShape& nextShape, float interpolation);
-        virtual void draw(cairo::Context &ctx);
-        void drawVertices(cairo::Context &ctx);
+        virtual void draw(CGContextRef ctx);
+        void drawVertices(CGContextRef ctx);
     };
     
 typedef std::shared_ptr<CShape> CShapeRef;

@@ -8,12 +8,30 @@ void ColorimetrieMacApp::prepareSettings( Settings *settings )
 {
 //    settings->enableHighDensityDisplay();
 //    settings->setWindowSize( 1024, 768 );
-//    settings->setFullScreen();
+    settings->setFullScreen();
 //    settings->setWindowSize(1920, 1080);
 //    settings->setWindowSize(1450, 800);
-    settings->setWindowSize(1650, 1000);
-    settings->setFrameRate(24.0f);
+//    settings->setWindowSize(1650, 1000);
+//    settings->setFrameRate(24.0f);
 //    settings->enableMultiTouch();
+}
+
+void ColorimetrieMacApp::setupCGContext()
+{
+	int width = getWindowWidth();
+	int height = getWindowHeight();
+	
+	mTextureData = (GLubyte *)malloc(width * height * 4); // if 4 components per pixel (RGBA)
+	
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	int bytesPerPixel = 4;
+	int bytesPerRow = bytesPerPixel * width;
+	int bitsPerComponent = 8;
+	mCtx = CGBitmapContextCreate( mTextureData, width, height,
+								 bitsPerComponent, bytesPerRow, colorSpace,
+								 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+	
+	CGColorSpaceRelease(colorSpace);
 }
 
 void ColorimetrieMacApp::setup()
@@ -47,8 +65,8 @@ void ColorimetrieMacApp::setup()
     
     mGroupManager.init(mGroupScaleFactor, mGroupOffset, &mExpansionFactor);
     mTimeline = Timeline::create();
-    mMouseInfo = std::shared_ptr<MouseInfo>(new MouseInfo);
-    mEditShape = std::unique_ptr<CEditShape>( new CEditShape(RGBcolor(255.0, 0, 0)));
+    mMouseInfo = std::make_shared<MouseInfo>();
+//    mEditShape = std::unique_ptr<CEditShape>( new CEditShape(RGBcolor(255.0, 0, 0)));
     
     mGuiManager.addGuiCallback(boost::bind(&ColorimetrieMacApp::guiEvent, this, boost::lambda::_1));
     mGuiManager.addColorCallback(boost::bind(&ColorimetrieMacApp::setEditShapeColor, this, boost::lambda::_1));
@@ -80,6 +98,8 @@ void ColorimetrieMacApp::setup()
 //    if( qtime::MovieWriter::getUserCompressionSettings( &format) ) {
 //		mMovieWriter = qtime::MovieWriter( path, getWindowWidth(), getWindowHeight(), format );
 //	}
+	
+	setupCGContext();
 }
 
 void ColorimetrieMacApp::mouseMove( MouseEvent event )
@@ -206,6 +226,7 @@ void ColorimetrieMacApp::loopAnimation(CShapeGroupRef group)
 void ColorimetrieMacApp::guiEvent(ciUIEvent* event)
 {
     string name = event->widget->getName();
+//    std::cout << name << std::endl;
     
     if(name == "zoom") {
         ciUILabelButton *b = (ciUILabelButton *) event->widget;
@@ -274,12 +295,36 @@ void ColorimetrieMacApp::guiEvent(ciUIEvent* event)
                name == "C" || name == "M" || name == "J" || name == "N") {
         ciUILabelButton *b = (ciUILabelButton *) event->widget;
         if( b->getValue() ) {
-            mEditShape->addColorValue(name);
+//            mEditShape->addColorValue(name);
         }
     } else if (name == "Effacer et recommencer") {
         ciUILabelButton *b = (ciUILabelButton *) event->widget;
         if( b->getValue() ) {
-            mEditShape->clear();
+//            mEditShape->clear();
+        }
+    } else if (name == "droite") {
+        ciUIToggle* b = (ciUIToggle *) event->widget;
+        if( b->getValue()) {
+            CShape::kRule->curveType = CRule::STRAIGHT;
+            mGroupManager.applyCurrentRule();
+        }
+    } else if (name == "catmull") {
+        ciUIToggle* b = (ciUIToggle *) event->widget;
+        if( b->getValue()) {
+            CShape::kRule->curveType = CRule::CATMULLROM;
+            mGroupManager.applyCurrentRule();
+        }
+    } else if (name == "bezier") {
+        ciUIToggle* b = (ciUIToggle *) event->widget;
+        if( b->getValue()) {
+            CShape::kRule->curveType = CRule::BEZIER;
+            mGroupManager.applyCurrentRule();
+        }
+    } else if (name == "spline") {
+        ciUIToggle* b = (ciUIToggle *) event->widget;
+        if( b->getValue()) {
+            CShape::kRule->curveType = CRule::BSPLINE;
+            mGroupManager.applyCurrentRule();
         }
     }
     
@@ -296,9 +341,9 @@ void ColorimetrieMacApp::resize()
 
 void ColorimetrieMacApp::setEditShapeColor(Color color)
 {
-    mEditShape->resetBaseColor(RGBcolor(color));
-    mEditShape->updateVertices();
-    mEditShape->updatePath();
+//    mEditShape->resetBaseColor(RGBcolor(color));
+//    mEditShape->updateVertices();
+//    mEditShape->updatePath();
 }
 
 void ColorimetrieMacApp::update()
@@ -320,24 +365,50 @@ void ColorimetrieMacApp::draw()
 {
     gl::color(Color::white());
     gl::clear(Color::white());
+	
+	::CGContextSaveGState( mCtx );
+	
+	::CGContextSetRGBFillColor( mCtx, mBackground.value(), mBackground.value(), mBackground.value(), 1.0 );
+	::CGContextAddRect( mCtx, CGRectMake( 0, 0, getWindowWidth(), getWindowHeight() ) );
+	::CGContextFillPath( mCtx );
+	
+	if( mGuiManager.getState() != GuiManager::EDIT ) {
+		Vec2f offset = mExpansionFactor * (*mGroupScaleFactor.get()) * 2.0f * (mOffset - Vec2f(50,50));
+		::CGContextTranslateCTM(mCtx, toPixels(getWindowWidth()/2.0f + offset.x), toPixels(getWindowHeight()/2.0f + offset.y) );
+		::CGContextScaleCTM(mCtx, mExpansionFactor, mExpansionFactor );
+		mGroupManager.drawGroups( mCtx );
+	}
+	
+	
+	gl::Texture::Format format;
+	format.enableMipmapping();
+	format.setInternalFormat(GL_RGBA);
+	gl::TextureRef tex = gl::Texture::create( mTextureData, GL_RGBA, getWindowWidth(), getWindowHeight() );
+	tex->setFlipped();
+	gl::draw( tex );
+	
+	::CGContextRestoreGState( mCtx );
     
-    cairo::SurfaceImage cairoSurface = cairo::SurfaceImage(toPixels(getWindowWidth()), toPixels(getWindowHeight()));
-    cairo::Context ctx( cairoSurface );
-    ctx.setTolerance(0.2);
-    ctx.setSourceRgb( mBackground.value(), mBackground.value(), mBackground.value() );
-    ctx.paint();
+//    cairo::SurfaceImage cairoSurface = cairo::SurfaceImage(toPixels(getWindowWidth()), toPixels(getWindowHeight()));
+//    cairo::Context ctx( cairoSurface );
+//    ctx.setTolerance(0.2);
+//    ctx.setSourceRgb( mBackground.value(), mBackground.value(), mBackground.value() );
+//    ctx.paint();
     
-    if (mGuiManager.getState() != GuiManager::EDIT) {
-        Vec2f offset = mExpansionFactor * (*mGroupScaleFactor.get()) * 2.0f * (mOffset - Vec2f(50,50));
-        ctx.translate(toPixels(getWindowWidth()/2.0f + offset.x), toPixels(getWindowHeight()/2.0f + offset.y));
-        ctx.scale(mExpansionFactor, mExpansionFactor);
-        
-        mGroupManager.drawGroups(ctx);
-    } else {
-        mEditShape->draw(ctx);
-    }
-    gl::draw(gl::Texture(cairoSurface.getSurface()), getWindowBounds());
+//    if (mGuiManager.getState() != GuiManager::EDIT) {
+//        Vec2f offset = mExpansionFactor * (*mGroupScaleFactor.get()) * 2.0f * (mOffset - Vec2f(50,50));
+//        ctx.translate(toPixels(getWindowWidth()/2.0f + offset.x), toPixels(getWindowHeight()/2.0f + offset.y));
+//        ctx.scale(mExpansionFactor, mExpansionFactor);
+//        
+//        mGroupManager.drawGroups(ctx);
+//    } else {
+////        mEditShape->draw(ctx);
+//    }
+//    gl::draw(gl::Texture(cairoSurface.getSurface()), getWindowBounds());
 
+	
+	
+	
 //    if(mMovieWriter && mRecording)
 //    {
 //		mMovieWriter.addFrame( copyWindowSurface() );

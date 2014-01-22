@@ -1962,7 +1962,20 @@ public:
                 ColorA cpo = ColorA( 0.819608f, 0.905882f, 0.317647f, 0.784314f );                                
                 setUIColors( cb, co, coh, cf, cfh, cp, cpo );                                 
             }
-                break;  
+                break;
+                
+            case CI_UI_THEME_DEFAULTONBLACK:
+            {
+                ColorA cb = ColorA( 0.396078f, 0.384314f, 0.45098f, 0.294118f );
+                ColorA co = CI_UI_COLOR_OUTLINE;
+                ColorA coh = CI_UI_COLOR_OUTLINE_HIGHLIGHT;
+                ColorA cf = CI_UI_COLOR_FILL;
+                ColorA cfh = CI_UI_COLOR_FILL_HIGHLIGHT;
+                ColorA cp = CI_UI_COLOR_PADDED;
+                ColorA cpo = CI_UI_COLOR_PADDED_OUTLINE;
+                setUIColors( cb, co, coh, cf, cfh, cp, cpo );
+            }
+                break;
                 
             default:
             {

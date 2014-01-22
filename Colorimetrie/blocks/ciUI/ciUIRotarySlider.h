@@ -427,6 +427,10 @@ public:
         label->setVisible(visible); 
     }
     
+    void setLabelVisible(bool _visible)
+    {
+        label->setVisible(_visible);
+    }
     
 	void setValue(float _value)
 	{

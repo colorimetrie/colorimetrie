@@ -19,6 +19,7 @@
 #include <boost/function.hpp>
 
 struct MouseInfo {
+	MouseInfo() : pos(Vec2f::zero()), isDown(false) {  }
     Vec2f pos;
     bool isDown;
 };

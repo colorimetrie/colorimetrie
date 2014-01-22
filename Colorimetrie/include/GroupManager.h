@@ -29,13 +29,14 @@ public:
     void triggerReset();
     void restartAnimation(CShapeGroupRef groupRef);
     void triggerRuleChange(int rule);
+    void applyCurrentRule();
     void adjustNumberOfShapes(int number);
     void resetRandomColorBase();
     
     void loadAllColors();
     void writeAllColors();
     
-    void drawGroups(cairo::Context &ctx);
+    void drawGroups(CGContextRef ctx);
     std::vector<CShapeGroupRef>& getGroups();
 };
 

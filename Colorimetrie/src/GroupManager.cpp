@@ -90,6 +90,13 @@ void GroupManager::triggerRuleChange(int rule)
     adjustShapes(maxSize, offset);
 }
 
+void GroupManager::applyCurrentRule()
+{
+    for(CShapeGroupRef group: mShapeGroups) {
+        group->applyRule();
+    }
+}
+
 void GroupManager::resetRandomColorBase()
 {
     for(CShapeGroupRef group: mShapeGroups) {
@@ -151,7 +158,7 @@ void GroupManager::writeAllColors()
 }
 
 
-void GroupManager::drawGroups(cairo::Context &ctx)
+void GroupManager::drawGroups(CGContextRef ctx)
 {
     for(CShapeGroupRef group: mShapeGroups) {
         group->draw(ctx);

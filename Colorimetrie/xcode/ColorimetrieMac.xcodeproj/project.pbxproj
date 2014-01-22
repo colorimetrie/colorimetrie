@@ -24,7 +24,6 @@
 		B02CBD161682C17D00633D84 /* CEditShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02CBD141682C17D00633D84 /* CEditShape.cpp */; };
 		B04BBFDA159FB4BB006BE66B /* CColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04BBFD9159FB4BB006BE66B /* CColor.cpp */; };
 		B04BBFE6159FCACE006BE66B /* CColorGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */; };
-		B051A01E16C5D30A00160E99 /* Cairo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B051A01816C5D30A00160E99 /* Cairo.cpp */; };
 		B052B15015CEF537002279F1 /* StagSans-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B052B14F15CEF537002279F1 /* StagSans-Book.ttf */; };
 		B0740309166F00B000A27B99 /* ColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0740308166F00B000A27B99 /* ColorPicker.cpp */; };
 		B074030C166F4EC400A27B99 /* color_picker.frag in Resources */ = {isa = PBXBuildFile; fileRef = B074030A166F4EC400A27B99 /* color_picker.frag */; };
@@ -65,49 +64,47 @@
 		B00E0DA415AA20D800A894E0 /* CShapeGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CShapeGroup.cpp; path = ../src/CShapeGroup.cpp; sourceTree = "<group>"; };
 		B00E0DA715AA20E800A894E0 /* CShapeGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CShapeGroup.h; path = ../include/CShapeGroup.h; sourceTree = "<group>"; };
 		B01ABCAB16CB330A003EECDC /* CRule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRule.cpp; path = ../src/CRule.cpp; sourceTree = "<group>"; };
+		B02AD098184F0278004F9E1C /* ciUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUI.h; path = ../blocks/ciUI/ciUI.h; sourceTree = "<group>"; };
+		B02AD099184F0278004F9E1C /* ciUI2DPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUI2DPad.h; path = ../blocks/ciUI/ciUI2DPad.h; sourceTree = "<group>"; };
+		B02AD09A184F0278004F9E1C /* ciUIBiLabelSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIBiLabelSlider.h; path = ../blocks/ciUI/ciUIBiLabelSlider.h; sourceTree = "<group>"; };
+		B02AD09B184F0278004F9E1C /* ciUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIButton.h; path = ../blocks/ciUI/ciUIButton.h; sourceTree = "<group>"; };
+		B02AD09C184F0278004F9E1C /* ciUICanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUICanvas.h; path = ../blocks/ciUI/ciUICanvas.h; sourceTree = "<group>"; };
+		B02AD09D184F0278004F9E1C /* ciUICircleSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUICircleSlider.h; path = ../blocks/ciUI/ciUICircleSlider.h; sourceTree = "<group>"; };
+		B02AD09E184F0278004F9E1C /* ciUIDropDownList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIDropDownList.h; path = ../blocks/ciUI/ciUIDropDownList.h; sourceTree = "<group>"; };
+		B02AD09F184F0278004F9E1C /* ciUIEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIEvent.h; path = ../blocks/ciUI/ciUIEvent.h; sourceTree = "<group>"; };
+		B02AD0A0184F0278004F9E1C /* ciUIFPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIFPS.h; path = ../blocks/ciUI/ciUIFPS.h; sourceTree = "<group>"; };
+		B02AD0A1184F0278004F9E1C /* ciUIFPSSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIFPSSlider.h; path = ../blocks/ciUI/ciUIFPSSlider.h; sourceTree = "<group>"; };
+		B02AD0A2184F0278004F9E1C /* ciUIImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIImage.h; path = ../blocks/ciUI/ciUIImage.h; sourceTree = "<group>"; };
+		B02AD0A3184F0278004F9E1C /* ciUIImageButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIImageButton.h; path = ../blocks/ciUI/ciUIImageButton.h; sourceTree = "<group>"; };
+		B02AD0A4184F0278004F9E1C /* ciUIImageSampler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIImageSampler.h; path = ../blocks/ciUI/ciUIImageSampler.h; sourceTree = "<group>"; };
+		B02AD0A5184F0278004F9E1C /* ciUIImageSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIImageSlider.h; path = ../blocks/ciUI/ciUIImageSlider.h; sourceTree = "<group>"; };
+		B02AD0A6184F0278004F9E1C /* ciUIImageToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIImageToggle.h; path = ../blocks/ciUI/ciUIImageToggle.h; sourceTree = "<group>"; };
+		B02AD0A7184F0278004F9E1C /* ciUILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUILabel.h; path = ../blocks/ciUI/ciUILabel.h; sourceTree = "<group>"; };
+		B02AD0A8184F0278004F9E1C /* ciUILabelButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUILabelButton.h; path = ../blocks/ciUI/ciUILabelButton.h; sourceTree = "<group>"; };
+		B02AD0A9184F0278004F9E1C /* ciUILabelToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUILabelToggle.h; path = ../blocks/ciUI/ciUILabelToggle.h; sourceTree = "<group>"; };
+		B02AD0AA184F0278004F9E1C /* ciUIMinimalSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIMinimalSlider.h; path = ../blocks/ciUI/ciUIMinimalSlider.h; sourceTree = "<group>"; };
+		B02AD0AB184F0278004F9E1C /* ciUIMovingGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIMovingGraph.h; path = ../blocks/ciUI/ciUIMovingGraph.h; sourceTree = "<group>"; };
+		B02AD0AC184F0278004F9E1C /* ciUIMultiImageButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIMultiImageButton.h; path = ../blocks/ciUI/ciUIMultiImageButton.h; sourceTree = "<group>"; };
+		B02AD0AD184F0278004F9E1C /* ciUIMultiImageToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIMultiImageToggle.h; path = ../blocks/ciUI/ciUIMultiImageToggle.h; sourceTree = "<group>"; };
+		B02AD0AE184F0278004F9E1C /* ciUINumberDialer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUINumberDialer.h; path = ../blocks/ciUI/ciUINumberDialer.h; sourceTree = "<group>"; };
+		B02AD0AF184F0278004F9E1C /* ciUIRadio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIRadio.h; path = ../blocks/ciUI/ciUIRadio.h; sourceTree = "<group>"; };
+		B02AD0B0184F0278004F9E1C /* ciUIRangeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIRangeSlider.h; path = ../blocks/ciUI/ciUIRangeSlider.h; sourceTree = "<group>"; };
+		B02AD0B1184F0278004F9E1C /* ciUIRectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIRectangle.h; path = ../blocks/ciUI/ciUIRectangle.h; sourceTree = "<group>"; };
+		B02AD0B2184F0278004F9E1C /* ciUIRotarySlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIRotarySlider.h; path = ../blocks/ciUI/ciUIRotarySlider.h; sourceTree = "<group>"; };
+		B02AD0B3184F0278004F9E1C /* ciUIScrollableCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIScrollableCanvas.h; path = ../blocks/ciUI/ciUIScrollableCanvas.h; sourceTree = "<group>"; };
+		B02AD0B4184F0278004F9E1C /* ciUISlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUISlider.h; path = ../blocks/ciUI/ciUISlider.h; sourceTree = "<group>"; };
+		B02AD0B5184F0278004F9E1C /* ciUISpacer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUISpacer.h; path = ../blocks/ciUI/ciUISpacer.h; sourceTree = "<group>"; };
+		B02AD0B6184F0278004F9E1C /* ciUISpectrum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUISpectrum.h; path = ../blocks/ciUI/ciUISpectrum.h; sourceTree = "<group>"; };
+		B02AD0B7184F0278004F9E1C /* ciUITextInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUITextInput.h; path = ../blocks/ciUI/ciUITextInput.h; sourceTree = "<group>"; };
+		B02AD0B8184F0278004F9E1C /* ciUIToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIToggle.h; path = ../blocks/ciUI/ciUIToggle.h; sourceTree = "<group>"; };
+		B02AD0B9184F0278004F9E1C /* ciUIToggleMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIToggleMatrix.h; path = ../blocks/ciUI/ciUIToggleMatrix.h; sourceTree = "<group>"; };
+		B02AD0BA184F0278004F9E1C /* ciUIWaveform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIWaveform.h; path = ../blocks/ciUI/ciUIWaveform.h; sourceTree = "<group>"; };
+		B02AD0BB184F0278004F9E1C /* ciUIWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIWidget.h; path = ../blocks/ciUI/ciUIWidget.h; sourceTree = "<group>"; };
+		B02AD0BC184F0278004F9E1C /* ciUIWidgetWithLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciUIWidgetWithLabel.h; path = ../blocks/ciUI/ciUIWidgetWithLabel.h; sourceTree = "<group>"; };
 		B02CBD141682C17D00633D84 /* CEditShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CEditShape.cpp; path = ../src/CEditShape.cpp; sourceTree = "<group>"; };
 		B02CBD181682C1A000633D84 /* CEditShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CEditShape.h; path = ../include/CEditShape.h; sourceTree = "<group>"; };
 		B04BBFD9159FB4BB006BE66B /* CColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CColor.cpp; path = ../src/CColor.cpp; sourceTree = "<group>"; };
 		B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CColorGroup.cpp; path = ../src/CColorGroup.cpp; sourceTree = "<group>"; };
-		B0519FFC16C5D30A00160E99 /* Cairo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cairo.h; sourceTree = "<group>"; };
-		B051A01816C5D30A00160E99 /* Cairo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cairo.cpp; sourceTree = "<group>"; };
-		B051A06B16C5DD1200160E99 /* ciUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUI.h; sourceTree = "<group>"; };
-		B051A06C16C5DD1200160E99 /* ciUI2DPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUI2DPad.h; sourceTree = "<group>"; };
-		B051A06D16C5DD1200160E99 /* ciUIBiLabelSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIBiLabelSlider.h; sourceTree = "<group>"; };
-		B051A06E16C5DD1200160E99 /* ciUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIButton.h; sourceTree = "<group>"; };
-		B051A06F16C5DD1200160E99 /* ciUICanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUICanvas.h; sourceTree = "<group>"; };
-		B051A07016C5DD1200160E99 /* ciUICircleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUICircleSlider.h; sourceTree = "<group>"; };
-		B051A07116C5DD1200160E99 /* ciUIDropDownList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIDropDownList.h; sourceTree = "<group>"; };
-		B051A07216C5DD1200160E99 /* ciUIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIEvent.h; sourceTree = "<group>"; };
-		B051A07316C5DD1200160E99 /* ciUIFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIFPS.h; sourceTree = "<group>"; };
-		B051A07416C5DD1200160E99 /* ciUIFPSSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIFPSSlider.h; sourceTree = "<group>"; };
-		B051A07516C5DD1200160E99 /* ciUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImage.h; sourceTree = "<group>"; };
-		B051A07616C5DD1200160E99 /* ciUIImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageButton.h; sourceTree = "<group>"; };
-		B051A07716C5DD1200160E99 /* ciUIImageSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageSampler.h; sourceTree = "<group>"; };
-		B051A07816C5DD1200160E99 /* ciUIImageSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageSlider.h; sourceTree = "<group>"; };
-		B051A07916C5DD1200160E99 /* ciUIImageToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageToggle.h; sourceTree = "<group>"; };
-		B051A07A16C5DD1200160E99 /* ciUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUILabel.h; sourceTree = "<group>"; };
-		B051A07B16C5DD1200160E99 /* ciUILabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUILabelButton.h; sourceTree = "<group>"; };
-		B051A07C16C5DD1200160E99 /* ciUILabelToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUILabelToggle.h; sourceTree = "<group>"; };
-		B051A07D16C5DD1200160E99 /* ciUIMinimalSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMinimalSlider.h; sourceTree = "<group>"; };
-		B051A07E16C5DD1200160E99 /* ciUIMovingGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMovingGraph.h; sourceTree = "<group>"; };
-		B051A07F16C5DD1200160E99 /* ciUIMultiImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMultiImageButton.h; sourceTree = "<group>"; };
-		B051A08016C5DD1200160E99 /* ciUIMultiImageToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMultiImageToggle.h; sourceTree = "<group>"; };
-		B051A08116C5DD1200160E99 /* ciUINumberDialer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUINumberDialer.h; sourceTree = "<group>"; };
-		B051A08216C5DD1200160E99 /* ciUIRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRadio.h; sourceTree = "<group>"; };
-		B051A08316C5DD1200160E99 /* ciUIRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRangeSlider.h; sourceTree = "<group>"; };
-		B051A08416C5DD1200160E99 /* ciUIRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRectangle.h; sourceTree = "<group>"; };
-		B051A08516C5DD1200160E99 /* ciUIRotarySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRotarySlider.h; sourceTree = "<group>"; };
-		B051A08616C5DD1200160E99 /* ciUIScrollableCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIScrollableCanvas.h; sourceTree = "<group>"; };
-		B051A08716C5DD1200160E99 /* ciUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUISlider.h; sourceTree = "<group>"; };
-		B051A08816C5DD1200160E99 /* ciUISpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUISpacer.h; sourceTree = "<group>"; };
-		B051A08916C5DD1200160E99 /* ciUISpectrum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUISpectrum.h; sourceTree = "<group>"; };
-		B051A08A16C5DD1200160E99 /* ciUITextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUITextInput.h; sourceTree = "<group>"; };
-		B051A08B16C5DD1200160E99 /* ciUIToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIToggle.h; sourceTree = "<group>"; };
-		B051A08C16C5DD1200160E99 /* ciUIToggleMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIToggleMatrix.h; sourceTree = "<group>"; };
-		B051A08D16C5DD1200160E99 /* ciUIWaveform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIWaveform.h; sourceTree = "<group>"; };
-		B051A08E16C5DD1200160E99 /* ciUIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIWidget.h; sourceTree = "<group>"; };
-		B051A08F16C5DD1200160E99 /* ciUIWidgetWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIWidgetWithLabel.h; sourceTree = "<group>"; };
 		B052B14F15CEF537002279F1 /* StagSans-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "StagSans-Book.ttf"; path = "../resources/StagSans-Book.ttf"; sourceTree = "<group>"; };
 		B067BA4E160A35890079677E /* ColorimetrieMacApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = ColorimetrieMacApp.h; path = ../include/ColorimetrieMacApp.h; sourceTree = "<group>"; };
 		B07402DD166ECEF200A27B99 /* GUI-Btn-Curve-CatMull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-Btn-Curve-CatMull.png"; sourceTree = "<group>"; };
@@ -162,16 +159,16 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B04BBFD9159FB4BB006BE66B /* CColor.cpp */,
-				B0CF374C158843A80007B323 /* CShape.cpp */,
 				00BAE6590E7ED9C10018A608 /* ColorimetrieMacApp.cpp */,
-				B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */,
-				B00E0DA415AA20D800A894E0 /* CShapeGroup.cpp */,
-				B0CDA35D16093E4500E15580 /* GuiManager.cpp */,
-				B0DA39DB16327B32008895AC /* GroupManager.cpp */,
-				B0740308166F00B000A27B99 /* ColorPicker.cpp */,
-				B02CBD141682C17D00633D84 /* CEditShape.cpp */,
 				B01ABCAB16CB330A003EECDC /* CRule.cpp */,
+				B0CF374C158843A80007B323 /* CShape.cpp */,
+				B02CBD141682C17D00633D84 /* CEditShape.cpp */,
+				B00E0DA415AA20D800A894E0 /* CShapeGroup.cpp */,
+				B0DA39DB16327B32008895AC /* GroupManager.cpp */,
+				B04BBFD9159FB4BB006BE66B /* CColor.cpp */,
+				B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */,
+				B0CDA35D16093E4500E15580 /* GuiManager.cpp */,
+				B0740308166F00B000A27B99 /* ColorPicker.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -227,17 +224,17 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				B067BA4E160A35890079677E /* ColorimetrieMacApp.h */,
 				B0FB301816CAD58B00E6DFF8 /* CRule.h */,
-				32CA4F630368D1EE00C91783 /* ColorimetrieMac_Prefix.pch */,
 				B0CF374F158843CF0007B323 /* CShape.h */,
 				B02CBD181682C1A000633D84 /* CEditShape.h */,
+				B00E0DA715AA20E800A894E0 /* CShapeGroup.h */,
+				B0DA39DF16327B52008895AC /* GroupManager.h */,
 				B0995C0E15744FA900ECB3BF /* CColor.h */,
 				B0B788001575D6CB00D5ACB4 /* CColorGroup.h */,
-				B00E0DA715AA20E800A894E0 /* CShapeGroup.h */,
 				B0CDA35B16093E2400E15580 /* GuiManager.h */,
-				B067BA4E160A35890079677E /* ColorimetrieMacApp.h */,
-				B0DA39DF16327B52008895AC /* GroupManager.h */,
 				B0740306166F00A600A27B99 /* ColorPicker.h */,
+				32CA4F630368D1EE00C91783 /* ColorimetrieMac_Prefix.pch */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -264,99 +261,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B02AD097184F026E004F9E1C /* ciUI */ = {
+			isa = PBXGroup;
+			children = (
+				B02AD098184F0278004F9E1C /* ciUI.h */,
+				B02AD099184F0278004F9E1C /* ciUI2DPad.h */,
+				B02AD09A184F0278004F9E1C /* ciUIBiLabelSlider.h */,
+				B02AD09B184F0278004F9E1C /* ciUIButton.h */,
+				B02AD09C184F0278004F9E1C /* ciUICanvas.h */,
+				B02AD09D184F0278004F9E1C /* ciUICircleSlider.h */,
+				B02AD09E184F0278004F9E1C /* ciUIDropDownList.h */,
+				B02AD09F184F0278004F9E1C /* ciUIEvent.h */,
+				B02AD0A0184F0278004F9E1C /* ciUIFPS.h */,
+				B02AD0A1184F0278004F9E1C /* ciUIFPSSlider.h */,
+				B02AD0A2184F0278004F9E1C /* ciUIImage.h */,
+				B02AD0A3184F0278004F9E1C /* ciUIImageButton.h */,
+				B02AD0A4184F0278004F9E1C /* ciUIImageSampler.h */,
+				B02AD0A5184F0278004F9E1C /* ciUIImageSlider.h */,
+				B02AD0A6184F0278004F9E1C /* ciUIImageToggle.h */,
+				B02AD0A7184F0278004F9E1C /* ciUILabel.h */,
+				B02AD0A8184F0278004F9E1C /* ciUILabelButton.h */,
+				B02AD0A9184F0278004F9E1C /* ciUILabelToggle.h */,
+				B02AD0AA184F0278004F9E1C /* ciUIMinimalSlider.h */,
+				B02AD0AB184F0278004F9E1C /* ciUIMovingGraph.h */,
+				B02AD0AC184F0278004F9E1C /* ciUIMultiImageButton.h */,
+				B02AD0AD184F0278004F9E1C /* ciUIMultiImageToggle.h */,
+				B02AD0AE184F0278004F9E1C /* ciUINumberDialer.h */,
+				B02AD0AF184F0278004F9E1C /* ciUIRadio.h */,
+				B02AD0B0184F0278004F9E1C /* ciUIRangeSlider.h */,
+				B02AD0B1184F0278004F9E1C /* ciUIRectangle.h */,
+				B02AD0B2184F0278004F9E1C /* ciUIRotarySlider.h */,
+				B02AD0B3184F0278004F9E1C /* ciUIScrollableCanvas.h */,
+				B02AD0B4184F0278004F9E1C /* ciUISlider.h */,
+				B02AD0B5184F0278004F9E1C /* ciUISpacer.h */,
+				B02AD0B6184F0278004F9E1C /* ciUISpectrum.h */,
+				B02AD0B7184F0278004F9E1C /* ciUITextInput.h */,
+				B02AD0B8184F0278004F9E1C /* ciUIToggle.h */,
+				B02AD0B9184F0278004F9E1C /* ciUIToggleMatrix.h */,
+				B02AD0BA184F0278004F9E1C /* ciUIWaveform.h */,
+				B02AD0BB184F0278004F9E1C /* ciUIWidget.h */,
+				B02AD0BC184F0278004F9E1C /* ciUIWidgetWithLabel.h */,
+			);
+			name = ciUI;
+			sourceTree = "<group>";
+		};
 		B0519FCE16C5D20500160E99 /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				B0519FF816C5D30A00160E99 /* Cairo */,
-				B051A06A16C5DD1200160E99 /* ciUI */,
+				B02AD097184F026E004F9E1C /* ciUI */,
 			);
 			name = Blocks;
-			sourceTree = "<group>";
-		};
-		B0519FF816C5D30A00160E99 /* Cairo */ = {
-			isa = PBXGroup;
-			children = (
-				B0519FF916C5D30A00160E99 /* include */,
-				B051A01716C5D30A00160E99 /* src */,
-			);
-			name = Cairo;
-			path = ../blocks/Cairo;
-			sourceTree = "<group>";
-		};
-		B0519FF916C5D30A00160E99 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				B0519FFA16C5D30A00160E99 /* cinder */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		B0519FFA16C5D30A00160E99 /* cinder */ = {
-			isa = PBXGroup;
-			children = (
-				B0519FFB16C5D30A00160E99 /* cairo */,
-			);
-			path = cinder;
-			sourceTree = "<group>";
-		};
-		B0519FFB16C5D30A00160E99 /* cairo */ = {
-			isa = PBXGroup;
-			children = (
-				B0519FFC16C5D30A00160E99 /* Cairo.h */,
-			);
-			path = cairo;
-			sourceTree = "<group>";
-		};
-		B051A01716C5D30A00160E99 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				B051A01816C5D30A00160E99 /* Cairo.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		B051A06A16C5DD1200160E99 /* ciUI */ = {
-			isa = PBXGroup;
-			children = (
-				B051A06B16C5DD1200160E99 /* ciUI.h */,
-				B051A06C16C5DD1200160E99 /* ciUI2DPad.h */,
-				B051A06D16C5DD1200160E99 /* ciUIBiLabelSlider.h */,
-				B051A06E16C5DD1200160E99 /* ciUIButton.h */,
-				B051A06F16C5DD1200160E99 /* ciUICanvas.h */,
-				B051A07016C5DD1200160E99 /* ciUICircleSlider.h */,
-				B051A07116C5DD1200160E99 /* ciUIDropDownList.h */,
-				B051A07216C5DD1200160E99 /* ciUIEvent.h */,
-				B051A07316C5DD1200160E99 /* ciUIFPS.h */,
-				B051A07416C5DD1200160E99 /* ciUIFPSSlider.h */,
-				B051A07516C5DD1200160E99 /* ciUIImage.h */,
-				B051A07616C5DD1200160E99 /* ciUIImageButton.h */,
-				B051A07716C5DD1200160E99 /* ciUIImageSampler.h */,
-				B051A07816C5DD1200160E99 /* ciUIImageSlider.h */,
-				B051A07916C5DD1200160E99 /* ciUIImageToggle.h */,
-				B051A07A16C5DD1200160E99 /* ciUILabel.h */,
-				B051A07B16C5DD1200160E99 /* ciUILabelButton.h */,
-				B051A07C16C5DD1200160E99 /* ciUILabelToggle.h */,
-				B051A07D16C5DD1200160E99 /* ciUIMinimalSlider.h */,
-				B051A07E16C5DD1200160E99 /* ciUIMovingGraph.h */,
-				B051A07F16C5DD1200160E99 /* ciUIMultiImageButton.h */,
-				B051A08016C5DD1200160E99 /* ciUIMultiImageToggle.h */,
-				B051A08116C5DD1200160E99 /* ciUINumberDialer.h */,
-				B051A08216C5DD1200160E99 /* ciUIRadio.h */,
-				B051A08316C5DD1200160E99 /* ciUIRangeSlider.h */,
-				B051A08416C5DD1200160E99 /* ciUIRectangle.h */,
-				B051A08516C5DD1200160E99 /* ciUIRotarySlider.h */,
-				B051A08616C5DD1200160E99 /* ciUIScrollableCanvas.h */,
-				B051A08716C5DD1200160E99 /* ciUISlider.h */,
-				B051A08816C5DD1200160E99 /* ciUISpacer.h */,
-				B051A08916C5DD1200160E99 /* ciUISpectrum.h */,
-				B051A08A16C5DD1200160E99 /* ciUITextInput.h */,
-				B051A08B16C5DD1200160E99 /* ciUIToggle.h */,
-				B051A08C16C5DD1200160E99 /* ciUIToggleMatrix.h */,
-				B051A08D16C5DD1200160E99 /* ciUIWaveform.h */,
-				B051A08E16C5DD1200160E99 /* ciUIWidget.h */,
-				B051A08F16C5DD1200160E99 /* ciUIWidgetWithLabel.h */,
-			);
-			path = ciUI;
 			sourceTree = "<group>";
 		};
 		B08A0A4E15B8F86200153788 /* ciUIresources */ = {
@@ -462,7 +416,6 @@
 				B0DA39DD16327B32008895AC /* GroupManager.cpp in Sources */,
 				B0740309166F00B000A27B99 /* ColorPicker.cpp in Sources */,
 				B02CBD161682C17D00633D84 /* CEditShape.cpp in Sources */,
-				B051A01E16C5D30A00160E99 /* Cairo.cpp in Sources */,
 				B01ABCAD16CB330A003EECDC /* CRule.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +426,8 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CINDER_PATH = ../../../../cinder_0.8.5_mac;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CINDER_PATH = ../../../../Cinder;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -486,18 +439,17 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Cairo/lib/macosx\"",
-					"\"$(SRCROOT)/Cairo/lib/msw\"",
-					"\"$(SRCROOT)/../blocks/Cairo/lib/macosx\"",
-					"\"$(SRCROOT)/../blocks/Cairo/lib/msw\"",
-				);
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
-					../blocks/Cairo/lib/macosx/libcairo.a,
-					"../blocks/Cairo/lib/macosx/libpixman-1.a",
-					../blocks/Cairo/lib/macosx/libpng14.a,
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpng14.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libcairo.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpixman-1.a\"",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpng14.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libcairo.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpixman-1.a\"",
 				);
 				PRODUCT_NAME = ColorimetrieMac;
 				WRAPPER_EXTENSION = app;
@@ -507,8 +459,8 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CINDER_PATH = ../../../../cinder_0.8.5_mac;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CINDER_PATH = ../../../../Cinder;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -522,18 +474,12 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Cairo/lib/macosx\"",
-					"\"$(SRCROOT)/Cairo/lib/msw\"",
-					"\"$(SRCROOT)/../blocks/Cairo/lib/macosx\"",
-					"\"$(SRCROOT)/../blocks/Cairo/lib/msw\"",
-				);
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/libcinder.a\"",
-					../blocks/Cairo/lib/macosx/libcairo.a,
-					"../blocks/Cairo/lib/macosx/libpixman-1.a",
-					../blocks/Cairo/lib/macosx/libpng14.a,
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpng14.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpng14.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libcairo.a\"",
+					"\"$(CINDER_PATH)/blocks/Cairo/lib/macosx/libpixman-1.a\"",
 				);
 				PRODUCT_NAME = ColorimetrieMac;
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -545,26 +491,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CINDER_PATH = ../../../cinder_0.8.5_mac;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = ../../../Cinder;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(CINDER_PATH)/boost\"",
-					../blocks/Cairo/include/macosx,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = (
-					../blocks/Cairo/lib/macosx/libcairo.a,
-					"../blocks/Cairo/lib/macosx/libpixman-1.a",
-					../blocks/Cairo/lib/macosx/libpng14.a,
-				);
-				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/Cairo/include ../blocks/ciUI/";
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/ciUI/";
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
@@ -573,26 +511,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CINDER_PATH = ../../../cinder_0.8.5_mac;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = ../../../Cinder;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(CINDER_PATH)/boost\"",
-					../blocks/Cairo/include/macosx,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = (
-					../blocks/Cairo/lib/macosx/libcairo.a,
-					"../blocks/Cairo/lib/macosx/libpixman-1.a",
-					../blocks/Cairo/lib/macosx/libpng14.a,
-				);
-				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/Cairo/include ../blocks/ciUI/";
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/ciUI/";
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;

@@ -1,4 +1,4 @@
-/********************************************************************************** 
+/**********************************************************************************
  
  Copyright (C) 2012 Syed Reza Ali (www.syedrezaali.com)
  
@@ -34,108 +34,108 @@
 #include "cinder/gl/TextureFont.h"
 #include "cinder/Font.h"
 
-class ciUIWidget           
+class ciUIWidget
 {
-protected:        
-	ciUIWidget *parent; 
-	ciUIRectangle *rect; 	
+protected:
+	ciUIWidget *parent;
+	ciUIRectangle *rect;
 	
     string name;            //State Properties
-	int kind; 
-	bool visible; 
-    int id;     
-    bool hit; 
-    int state; 
+	int kind;
+	bool visible;
+    int id;
+    bool hit;
+    int state;
     bool embedded;
     
     gl::TextureFontRef font;
     
-	bool draw_back;         //Rendering Properties 
-	bool draw_outline; 
-	bool draw_outline_highlight; 
-	bool draw_fill; 
-	bool draw_fill_highlight; 
+	bool draw_back;         //Rendering Properties
+	bool draw_outline;
+	bool draw_outline_highlight;
+	bool draw_fill;
+	bool draw_fill_highlight;
     
-    ColorA color_back; 
-	ColorA color_outline; 
-	ColorA color_outline_highlight;	
-	ColorA color_fill; 
-	ColorA color_fill_highlight; 
+    ColorA color_back;
+	ColorA color_outline;
+	ColorA color_outline_highlight;
+	ColorA color_fill;
+	ColorA color_fill_highlight;
     
 	float padding;          //Spacing/Padding Purposes
-	ciUIRectangle *paddedRect; 	
+	ciUIRectangle *paddedRect;
     
-	bool draw_padded_rect; 
-	bool draw_padded_rect_outline;     
-    ColorA color_padded_rect; 
+	bool draw_padded_rect;
+	bool draw_padded_rect_outline;
+    ColorA color_padded_rect;
 	ColorA color_padded_rect_outline;
     
-	float op_back;
-	float op_outline;
-	float op_outline_highlight;
-	float op_fill;
-	float op_fill_highlight;
-	float op_padded_rect;
-	float op_padded_rect_outline;
+    float op_back;
+    float op_outline;
+    float op_outline_highlight;
+    float op_fill;
+    float op_fill_highlight;
+    float op_padded_rect;
+    float op_padded_rect_outline;
     
 #if defined( CINDER_COCOA_TOUCH )
-    int touchId;     
-#endif    
-    bool dead;     
-    
-public:        
-    ciUIWidget() 
-    {        
-        name = "base"; 
-        id = -1; 
-        hit = false; 
-        visible = true; 
-#if defined( CINDER_COCOA_TOUCH )
-        touchId = -1; 
+    int touchId;
 #endif
-        parent = NULL; 
-        state = CI_UI_STATE_NORMAL; 
-        draw_back = true; 
-        draw_outline = false; 
-        draw_fill = false; 
+    bool dead;
+    
+public:
+    ciUIWidget()
+    {
+        name = "base";
+        id = -1;
+        hit = false;
+        visible = true;
+#if defined( CINDER_COCOA_TOUCH )
+        touchId = -1;
+#endif
+        parent = NULL;
+        state = CI_UI_STATE_NORMAL;
+        draw_back = true;
+        draw_outline = false;
+        draw_fill = false;
         draw_fill_highlight = false;
-        draw_outline_highlight = false;         
-
-        padding = CI_UI_GLOBAL_PADDING; 
-		draw_padded_rect = CI_UI_DRAW_PADDING; 						
-		draw_padded_rect_outline = CI_UI_DRAW_PADDING_OUTLINE; 						        
+        draw_outline_highlight = false;
+        
+        padding = CI_UI_GLOBAL_PADDING;
+		draw_padded_rect = CI_UI_DRAW_PADDING;
+		draw_padded_rect_outline = CI_UI_DRAW_PADDING_OUTLINE;
         
         color_back = CI_UI_COLOR_BACK;								//the rect's back color
-        color_outline = CI_UI_COLOR_OUTLINE;						//the rect's outline color 
-        color_outline_highlight = CI_UI_COLOR_OUTLINE_HIGHLIGHT;   //the rect's onMouseOver outline highlight color         
-		color_fill = CI_UI_COLOR_FILL;								//the rect's fill color 
-        color_fill_highlight = CI_UI_COLOR_FILL_HIGHLIGHT;         //the rect's onMouseDown highlight color 
-
-        color_padded_rect = CI_UI_COLOR_PADDED;
-        color_padded_rect_outline = CI_UI_COLOR_PADDED_OUTLINE;     
+        color_outline = CI_UI_COLOR_OUTLINE;						//the rect's outline color
+        color_outline_highlight = CI_UI_COLOR_OUTLINE_HIGHLIGHT;   //the rect's onMouseOver outline highlight color
+		color_fill = CI_UI_COLOR_FILL;								//the rect's fill color
+        color_fill_highlight = CI_UI_COLOR_FILL_HIGHLIGHT;         //the rect's onMouseDown highlight color
         
-        dead = false; 
-        embedded = false; 
+        color_padded_rect = CI_UI_COLOR_PADDED;
+        color_padded_rect_outline = CI_UI_COLOR_PADDED_OUTLINE;
+        
+        dead = false;
+        embedded = false;
     }
     
-    virtual ~ciUIWidget() 
+    virtual ~ciUIWidget()
     {
         if(rect != NULL)
         {
-            delete rect; 
+            delete rect;
         }
         if(paddedRect != NULL)
         {
-            delete paddedRect; 
+            delete paddedRect;
         }
     }
     
     virtual void update() {}
-    virtual void draw() 
+    virtual void draw()
     {
         drawPadded();
-        drawPaddedOutline();        
-
+        drawPaddedOutline();
+        
         drawBack();
         
         drawOutline();
@@ -145,126 +145,126 @@ public:
         drawFillHighlight();
     }
     
-    virtual void drawBack() 
+    virtual void drawBack()
     {
         if(draw_back)
         {
-
-            gl::color(color_back); 
-            rect->draw();         
+            
+            gl::color(color_back);
+            rect->draw();
         }
     }
     
-    virtual void drawOutline() 
+    virtual void drawOutline()
     {
         if(draw_outline)
         {
-            gl::color(color_outline); 
-            rect->drawOutline(); 
-        } 
+            gl::color(color_outline);
+            rect->drawOutline();
+        }
     }
     
-    virtual void drawOutlineHighlight() 
+    virtual void drawOutlineHighlight()
     {
         if(draw_outline_highlight)
         {
-            gl::color(color_outline_highlight); 
-            rect->drawOutline();          
-        }
-    }    
-    
-    virtual void drawFill() 
-    {
-        if(draw_fill)
-        {
-            gl::color(color_fill); 
-            rect->draw(); 
+            gl::color(color_outline_highlight);
+            rect->drawOutline();
         }
     }
     
-    virtual void drawFillHighlight() 
+    virtual void drawFill()
+    {
+        if(draw_fill)
+        {
+            gl::color(color_fill);
+            rect->draw();
+        }
+    }
+    
+    virtual void drawFillHighlight()
     {
         if(draw_fill_highlight)
         {
-            gl::color(color_fill_highlight); 
-            rect->draw(); 
-        }    
+            gl::color(color_fill_highlight);
+            rect->draw();
+        }
     }
     
     virtual void drawPadded()
     {
 		if(draw_padded_rect)
 		{
-            gl::color(color_padded_rect); 
-			paddedRect->draw(); 
-		}                
+            gl::color(color_padded_rect);
+			paddedRect->draw();
+		}
     }
     
     virtual void drawPaddedOutline()
     {
         if(draw_padded_rect_outline)
 		{
-            gl::color(color_padded_rect_outline); 
-			paddedRect->draw(); 
-		}                
+            gl::color(color_padded_rect_outline);
+			paddedRect->draw();
+		}
     }
 	
-	void setOpacity(float opacity)
-	{
-		color_back.a = op_back * opacity;
-		color_outline.a = op_outline * opacity;
-		color_outline_highlight.a = op_outline_highlight * opacity;
-		color_fill.a = op_fill * opacity;
-		color_fill_highlight.a = op_fill_highlight * opacity;
-		color_padded_rect.a = op_padded_rect * opacity;
-		color_padded_rect_outline.a = op_padded_rect_outline * opacity;
-	}
+    void setOpacity(float opacity)
+    {
+        color_back.a = op_back * opacity;
+        color_outline.a = op_outline * opacity;
+        color_outline_highlight.a = op_outline_highlight * opacity;
+        color_fill.a = op_fill * opacity;
+        color_fill_highlight.a = op_fill_highlight * opacity;
+        color_padded_rect.a = op_padded_rect * opacity;
+        color_padded_rect_outline.a = op_padded_rect_outline * opacity;
+    }
     
 #if defined( CINDER_COCOA_TOUCH )
     
     void touchesBegan(TouchEvent &event)
     {
         if(touchId == -1)
-        {                
-            for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) 
+        {
+            for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
             {
                 this->mouseDown(touchIt->getX(), touchIt->getY(), 0);
                 if(hit)
                 {
-                    touchId = touchIt->getId();    
-                    break; 
-                }                        
+                    touchId = touchIt->getId();
+                    break;
+                }
             }
-        }                   
-    }
-    
-    void touchesMoved(TouchEvent &event) 
-    {
-        for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) 
-        {        
-            if(touchId == touchIt->getId())
-            {
-                this->mouseDrag(touchIt->getX(), touchIt->getY(), 0); 
-                break;
-            }       
         }
     }
     
-    void touchesEnded(TouchEvent &event) 
+    void touchesMoved(TouchEvent &event)
     {
-        for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) 
-        {        
+        for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
+        {
             if(touchId == touchIt->getId())
             {
-                this->mouseUp(touchIt->getX(), touchIt->getY(), 0); 
-                touchId = -1;   
-                break; 
+                this->mouseDrag(touchIt->getX(), touchIt->getY(), 0);
+                break;
+            }
+        }
+    }
+    
+    void touchesEnded(TouchEvent &event)
+    {
+        for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
+        {
+            if(touchId == touchIt->getId())
+            {
+                this->mouseUp(touchIt->getX(), touchIt->getY(), 0);
+                touchId = -1;
+                break;
             }
         }
     }
     
 #endif
-
+    
 	virtual void mouseMove(int x, int y ) {}
 	virtual void mouseDrag(int x, int y, int button) {}
 	virtual void mouseDown(int x, int y, int button) {}
@@ -276,64 +276,64 @@ public:
     
 	virtual void setParent(ciUIWidget *_parent)
 	{
-		parent = _parent; 
+		parent = _parent;
         rect->setParent(parent->getRect());
         paddedRect->setParent(rect);
 	}
 	
 	virtual void setRectParent(ciUIRectangle *_prect)
 	{
-		rect->setParent(_prect); 
+		rect->setParent(_prect);
 	}
-
+    
 	virtual ciUIWidget *getParent()
 	{
-		return parent; 
+		return parent;
 	}
-
+    
 	virtual ciUIRectangle* getRect()
 	{
-		return rect; 
+		return rect;
 	}
 	
 	virtual void setName(string _name)
 	{
-		name = _name; 
+		name = _name;
 	}
     
 	virtual void setState(int _state)
     {
-        state = _state; 
+        state = _state;
     }
     
 	virtual void setDrawPadding(bool _draw_padded_rect)
 	{
-		draw_padded_rect = _draw_padded_rect; 
+		draw_padded_rect = _draw_padded_rect;
 	}
     
     virtual void setDrawPaddingOutline(bool _draw_padded_rect_outline)
 	{
-		draw_padded_rect_outline = _draw_padded_rect_outline; 
-	}    
+		draw_padded_rect_outline = _draw_padded_rect_outline;
+	}
     
 	virtual void setDrawBack(bool _draw_back)
 	{
-		draw_back = _draw_back; 
+		draw_back = _draw_back;
 	}
-
+    
 	virtual void setDrawOutline(bool _draw_outline)
 	{
-		draw_outline = _draw_outline; 
+		draw_outline = _draw_outline;
 	}
-
+    
 	virtual void setDrawFill(bool _draw_fill)
 	{
-		draw_fill = _draw_fill; 
+		draw_fill = _draw_fill;
 	}
 	
 	virtual void setDrawFillHighLight(bool _draw_fill_highlight)
 	{
-		draw_fill_highlight = _draw_fill_highlight; 
+		draw_fill_highlight = _draw_fill_highlight;
 	}
 	
 	virtual void setDrawOutlineHighLight(bool _draw_outline_highlight)
@@ -344,31 +344,31 @@ public:
 	virtual void setColorBack(ColorA _color_back)
 	{
 		color_back = _color_back;
-		op_back = color_back.a;
+        op_back = color_back.a;
 	}
-		
+    
 	virtual void setColorOutline(ColorA _color_outline)
 	{
 		color_outline = _color_outline;
-		op_outline = color_outline.a;
+        op_outline = color_outline.a;
 	}
 	
 	virtual void setColorOutlineHighlight(ColorA _color_outline_highlight)
 	{
 		color_outline_highlight = _color_outline_highlight;
-		op_outline_highlight = color_outline_highlight.a;
-	}	
-
+        op_outline_highlight = color_outline_highlight.a;
+	}
+    
 	virtual void setColorFill(ColorA _color_fill)
 	{
 		color_fill = _color_fill;
-		op_fill = color_fill.a;
+        op_fill = color_fill.a;
 	}
 	
 	virtual void setColorFillHighlight(ColorA _color_fill_highlight)
 	{
 		color_fill_highlight = _color_fill_highlight;
-		op_fill_highlight = color_fill_highlight.a;
+        op_fill_highlight = color_fill_highlight.a;
 	}
 	
     virtual void setColorPadded(ColorA _color_padded_rect)
@@ -387,7 +387,7 @@ public:
 	{
         return color_padded_rect;
 	}
-
+    
 	ColorA& getColorPaddedOutline()
 	{
         return color_padded_rect_outline;
@@ -395,47 +395,47 @@ public:
     
 	ColorA& getColorBack()
 	{
-		return color_back; 
+		return color_back;
 	}
 	
 	ColorA& getColorOutline()
 	{
-		return color_outline; 
+		return color_outline;
 	}
 	
 	ColorA& getColorOutlineHighlight()
 	{
-		return color_outline_highlight; 
-	}	
+		return color_outline_highlight;
+	}
 	
 	ColorA& getColorFill()
 	{
-		return color_fill; 
+		return color_fill;
 	}
 	
 	ColorA& getColorFillHighlight()
 	{
-		return color_fill_highlight; 
+		return color_fill_highlight;
 	}
-		
+    
     virtual int getKind()
 	{
-		return kind; 
+		return kind;
 	}
-    	
+    
     virtual void setVisible(bool _visible)
     {
-        visible = _visible; 
+        visible = _visible;
     }
     
     virtual bool isVisible()
     {
-        return visible; 
+        return visible;
     }
     
     virtual void toggleVisible()
     {
-        visible =! visible; 
+        visible =! visible;
     }
     
     virtual bool isHit(float x, float y)
@@ -446,20 +446,20 @@ public:
         }
         else
         {
-            return false; 
+            return false;
         }
     }
     
 	virtual string getName()
 	{
-		return name; 
+		return name;
 	}
 	
 	virtual void triggerEvent(ciUIWidget *child)
 	{
 		if(parent != NULL)
 		{
-			parent->triggerEvent(child); 
+			parent->triggerEvent(child);
 		}
 	}
     
@@ -467,49 +467,49 @@ public:
     {
 		if(parent != NULL)
 		{
-			parent->triggerEvent(this); 
-		}        
+			parent->triggerEvent(this);
+		}
     }
 	
 	virtual void setPadding(float _padding)
 	{
-		padding = _padding; 
+		padding = _padding;
 		paddedRect->set(-padding, -padding, rect->getWidth()+padding*2.0f, rect->getHeight()+padding*2.0f);
 	}
 	
 	virtual float getPadding()
 	{
-		return padding; 
+		return padding;
 	}
 	
 	virtual ciUIRectangle *getPaddingRect()
 	{
-		return paddedRect; 
+		return paddedRect;
 	}
-
+    
     virtual void stateChange()
-    { 
+    {
         
     }
     
     virtual bool isDraggable()
     {
-        return false; 
+        return false;
     }
     
     virtual bool isEmbedded()
     {
-        return embedded; 
+        return embedded;
     }
     
     virtual void setEmbedded(bool _embedded)
     {
-        embedded = _embedded; 
+        embedded = _embedded;
     }
     
     void setID(int _id)
     {
-        id = _id; 
+        id = _id;
     }
     
     int getID()
@@ -520,21 +520,21 @@ public:
     virtual void addWidget(ciUIWidget *widget)
     {
         //Experimental
-    }    
-
+    }
+    
     virtual void removeWidget(ciUIWidget *widget)
     {
         //Experimental
-    }    
+    }
     
     virtual bool hasLabel()
     {
-        return false; 
+        return false;
     }
     
     virtual void setFont(gl::TextureFontRef _font)
 	{
-		font = _font; 
+		font = _font;
 	}
     
     string numToString(float _number, int _precision)
@@ -542,16 +542,16 @@ public:
         ostringstream ss;
         ss << fixed << setprecision(_precision);
         ss << _number;
-        return ss.str(); 
+        return ss.str();
     }
-
+    
     string numToString(float _number)
     {
         ostringstream ss;
         ss << _number;
         return ss.str(); 
     }
-
+    
 };
 
 #endif

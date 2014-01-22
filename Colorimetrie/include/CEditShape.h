@@ -25,6 +25,6 @@ public:
     void updateVertices();
     void updatePath();
     void clear();
-    virtual void draw(cairo::Context &ctx) override;
+    virtual void draw(CGContextRef ctx) override;
 };
 }

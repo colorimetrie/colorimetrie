@@ -53,33 +53,33 @@ void CEditShape::addVertex(float x, float y)
     updatePath();
 }
 
-void CEditShape::draw(cairo::Context &ctx)
+void CEditShape::draw(CGContextRef ctx)
 {
-    float scale = 2.5f;
-    float w = ci::app::getWindowWidth();
-    float h = ci::app::getWindowHeight();
-    ctx.save();
-    ctx.translate( app::toPixels(w/2.0f - 0.1*w), app::toPixels(h/2.0f - 0.15*w));
-    ctx.scale(app::toPixels(scale), app::toPixels(scale));
-    if (mInterpolatedPath !=nullptr && !mInterpolatedPath->empty()) {
-        ctx.save();
-        
-        ctx.appendPath(*mInterpolatedPath);
-        ctx.setSource(mInterpolatedColor);
-        ctx.setLineWidth(3.0f);
-        ctx.setLineCap(ci::cairo::LINE_CAP_ROUND);
-        ctx.stroke();
-//        drawVertices(ctx);
-        ctx.restore();
-    }
-    ctx.setSource(Color::white());
-//    ctx.line(Vec2f(0, -255.0f), Vec2f(0, 255.0f));
+//    float scale = 2.5f;
+//    float w = ci::app::getWindowWidth();
+//    float h = ci::app::getWindowHeight();
+//    ctx.save();
+//    ctx.translate( app::toPixels(w/2.0f - 0.1*w), app::toPixels(h/2.0f - 0.15*w));
+//    ctx.scale(app::toPixels(scale), app::toPixels(scale));
+//    if (mInterpolatedPath !=nullptr && !mInterpolatedPath->empty()) {
+//        ctx.save();
+//        
+//        ctx.appendPath(*mInterpolatedPath);
+//        ctx.setSource(mInterpolatedColor);
+//        ctx.setLineWidth(3.0f);
+//        ctx.setLineCap(ci::cairo::LINE_CAP_ROUND);
+//        ctx.stroke();
+////        drawVertices(ctx);
+//        ctx.restore();
+//    }
+//    ctx.setSource(Color::white());
+////    ctx.line(Vec2f(0, -255.0f), Vec2f(0, 255.0f));
+////    ctx.line(Vec2f(-10.0f, 0), Vec2f(255.0f, 0));
+//    ctx.line(Vec2f(0, -10.0f), Vec2f(0, 255.0f));
 //    ctx.line(Vec2f(-10.0f, 0), Vec2f(255.0f, 0));
-    ctx.line(Vec2f(0, -10.0f), Vec2f(0, 255.0f));
-    ctx.line(Vec2f(-10.0f, 0), Vec2f(255.0f, 0));
-    ctx.setLineWidth(0.5f);
-    ctx.stroke();
-    ctx.restore();
+//    ctx.setLineWidth(0.5f);
+//    ctx.stroke();
+//    ctx.restore();
 }
 
 void CEditShape::updateVertices()

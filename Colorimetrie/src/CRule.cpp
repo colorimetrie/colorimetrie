@@ -24,18 +24,18 @@ CRule::CRule()
     
 }
 
-void CRule::applyStyle(ci::cairo::Context &ctx)
+void CRule::applyStyle( CGContextRef ctx )
 {
-    ctx.setLineWidth(strokeWidth);
-    ctx.setLineJoin(ci::cairo::LINE_JOIN_MITER);
-    ctx.setLineCap(ci::cairo::LINE_CAP_ROUND);
+	::CGContextSetLineWidth( ctx, strokeWidth );
+	::CGContextSetLineJoin( ctx, kCGLineJoinMiter );
+	::CGContextSetLineCap( ctx, kCGLineCapRound );
+	
     if (strokeWidth > 0 && fill) {
-        ctx.fillPreserve();
-        ctx.stroke();
+		::CGContextDrawPath( ctx, kCGPathFillStroke );
     } else if (strokeWidth > 0) {
-        ctx.stroke();
+		::CGContextDrawPath( ctx, kCGPathStroke );
     } else if (fill) {
-        ctx.fill();
+		::CGContextDrawPath( ctx, kCGPathFill );
     }
 }
 

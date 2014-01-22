@@ -10,7 +10,6 @@
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/Rand.h"
-#include "cinder/cairo/Cairo.h"
 #include "cinder/Timeline.h"
 #include "cinder/Tween.h"
 #include "cinder/Easing.h"
@@ -28,7 +27,9 @@
 
 #include "GuiManager.h"
 #include "GroupManager.h"
-#include "CEditShape.h"
+//#include "CEditShape.h"
+
+#include <CoreGraphics/CoreGraphics.h>
 
 using namespace ci;
 using namespace ci::app;
@@ -56,6 +57,7 @@ public:
     void shutdown();
     
 private:
+	void setupCGContext();
     void setupGUI();
     void setupRulesMenu();
     void setupMainMenu();
@@ -90,10 +92,13 @@ private:
     
     GuiManager mGuiManager;
     
-    std::unique_ptr<CEditShape> mEditShape;
+//    std::unique_ptr<CEditShape> mEditShape;
     
     TimelineRef mTimeline;
     
+	CGContextRef	mCtx;
+	GLubyte* mTextureData;
+	
     bool mRecording;
 //    qtime::MovieWriter	mMovieWriter;
 };

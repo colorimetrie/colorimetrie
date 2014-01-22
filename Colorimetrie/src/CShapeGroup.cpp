@@ -186,25 +186,19 @@ void CShapeGroup::finishAnimation()
 	IsAnimating = false;
 }
 
-void CShapeGroup::draw(cairo::Context &ctx)
+void CShapeGroup::draw(CGContextRef ctx)
 {
     Vec2f finalPos = (*mExpansionFactorRef) * mPosition +
                      (1.0f - (*mExpansionFactorRef - 1.0f)/5.0f) * (*mScaleRef)*(*mOffsetRef);
-    ctx.save();
-    ctx.translate(ci::app::toPixels(finalPos));
-    ctx.scale(ci::app::toPixels(*mScaleRef), ci::app::toPixels(*mScaleRef));
-//    ctx.setSourceRgb(1.0f, 0.0f, 0.0f);
-//    ctx.rectangle(0, 0, 100, 100);
-    
+	
+	::CGContextSaveGState( ctx );
+	::CGContextTranslateCTM( ctx, ci::app::toPixels(finalPos.x), ci::app::toPixels(finalPos.y) );
+	::CGContextScaleCTM( ctx, ci::app::toPixels(*mScaleRef), ci::app::toPixels(*mScaleRef) );
     for(CShapeRef shape: mShapes) {
         shape->draw(ctx);
         if (CShape::kRule->showVertices) {
             shape->drawVertices(ctx);
         }
     }
-    
-//    Vec2f c = getAverageCenter();
-//    ctx.rectangle(c.x-2.0f, c.y-2.0f, 4.0f, 4.0f);
-    
-    ctx.restore();
+	::CGContextRestoreGState( ctx );
 }

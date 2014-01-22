@@ -52,7 +52,7 @@ public:
 	void initAnimation();
 	void animate();
 	void finishAnimation();
-    void draw(cairo::Context &ctx);
+    void draw(CGContextRef ctx);
     
 };
 

@@ -21,7 +21,7 @@ class ColorPicker {
     
     float mAlpha;
     static bool kShaderLoaded;
-    static gl::GlslProg kColorPickerShader;
+    static gl::GlslProgRef kColorPickerShader;
     Color mColor;
     
     void pick();

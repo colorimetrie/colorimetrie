@@ -138,17 +138,99 @@ void CShape::animate(const CShape& nextShape, float interpolation)
 	mInterpolatedColor = (1.0f - interpolation) * mColor + interpolation * nextShape.getDisplayColor();
 }
 
-void CShape::draw(cairo::Context &ctx)
+void appendPath( CGContextRef ctx, const cinder::Path2d &path )
 {
-    ctx.setSource(mInterpolatedColor);
-    ctx.appendPath(*mInterpolatedPath);
-    kRule->applyStyle(ctx);
+	size_t point = 0;
+	if( path.empty() )
+		return;
+	
+	::CGContextBeginPath( ctx );
+	
+	Vec2f pt = path.getPoint( point++ );
+	::CGContextMoveToPoint( ctx, pt.x, pt.y );
+	for( size_t seg = 0; seg < path.getNumSegments(); ++seg ) {
+		switch( path.getSegmentType( seg ) ) {
+			case Path2d::MOVETO:
+				break;
+			case Path2d::LINETO: {
+				pt = path.getPoint( point++ );
+				::CGContextAddLineToPoint( ctx, pt.x, pt.y ); }
+				break;
+			case Path2d::QUADTO: {
+				const Vec2f &spl0( path.getPoint( point - 1 ) );
+				const Vec2f &spl1( path.getPoint( point + 0 ) );
+				const Vec2f &spl2( path.getPoint( point + 1 ) );
+				Vec2f pt0 = spl0 + (spl1 - spl0) / 3.0f * 2.0f;
+				Vec2f pt1 = spl1 + (spl2 - spl1) / 3.0f;
+				Vec2f pt2 = spl2;
+				::CGContextAddCurveToPoint( ctx, pt0.x, pt0.y, pt1.x, pt1.y, pt2.x, pt2.y );
+				point += 2; }
+				break;
+			case Path2d::CUBICTO: {
+				Vec2f pt0 = path.getPoint( point );
+				Vec2f pt1 = path.getPoint( point+1 );
+				Vec2f pt2 = path.getPoint( point+2 );
+				::CGContextAddCurveToPoint( ctx, pt0.x, pt0.y, pt1.x, pt1.y, pt2.x, pt2.y );
+				point += 3; }
+				break;
+			case Path2d::CLOSE: {
+				::CGContextClosePath( ctx );
+				}
+				break;
+		}
+	}
 }
 
-void CShape::drawVertices(cairo::Context &ctx) {
-//    ctx.setSource(ci::Color(0,0,0));    
+
+//void Context::appendPath( const cinder::Path2d &path )
+//{
+//	size_t point = 0;
+//	if( path.empty() )
+//	return;
+//	moveTo( path.getPoint( point++ ) );
+//	for( size_t seg = 0; seg < path.getNumSegments(); ++seg ) {
+//		switch( path.getSegmentType( seg ) ) {
+//			case Path2d::MOVETO:
+//			break;
+//			case Path2d::LINETO:
+//			lineTo( path.getPoint( point++ ) );
+//			break;
+//			case Path2d::QUADTO: {
+//				const Vec2f &spl0( path.getPoint( point - 1 ) ); const Vec2f &spl1( path.getPoint( point + 0 ) ); const Vec2f &spl2( path.getPoint( point + 1 ) );
+//				curveTo( spl0 + (spl1 - spl0) / 3.0f * 2.0f, spl1 + (spl2 - spl1) / 3.0f, spl2 );
+//				point += 2;
+//			}
+//			break;
+//			case Path2d::CUBICTO:
+//			curveTo( path.getPoint( point ), path.getPoint( point + 1 ), path.getPoint( point + 2 ) );
+//			point += 3;
+//			break;
+//			case Path2d::CLOSE:
+//			closePath();
+//			break;
+//		}
+//	}
+//}
+
+void appendPath( CGContextRef ctx, const cinder::Shape2d &path )
+{
+	for( size_t contCount = 0; contCount < path.getNumContours(); ++contCount ) {
+		const Path2d &contour( path.getContour( contCount ) );
+		appendPath( ctx, contour );
+	}
+}
+
+void CShape::draw(CGContextRef ctx)
+{
+    appendPath(ctx, *mInterpolatedPath);
+	::CGContextSetRGBFillColor( ctx, mInterpolatedColor.r, mInterpolatedColor.g, mInterpolatedColor.b, 1.0 );
+	::CGContextSetRGBStrokeColor( ctx, mInterpolatedColor.r, mInterpolatedColor.g, mInterpolatedColor.b, 1.0 );
+    kRule->applyStyle( ctx );
+}
+
+void CShape::drawVertices(CGContextRef ctx) {
     for(Vec2f vertex: mVertices) {
-        ctx.rectangle(vertex.x-2.0f, vertex.y-2.0f, 4.0f, 4.0f);
-        ctx.fill();
+		::CGContextAddRect( ctx, ::CGRectMake( vertex.x-2.0f, vertex.y-2.0f, 4.0f, 4.0f ) );
+		::CGContextFillPath( ctx );
     }
 }

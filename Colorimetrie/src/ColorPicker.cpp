@@ -7,9 +7,10 @@
 //
 #include <math.h>
 #include "ColorPicker.h"
+#include "Resources.h"
 
 bool ColorPicker::kShaderLoaded = false;
-gl::GlslProg ColorPicker::kColorPickerShader;
+gl::GlslProgRef ColorPicker::kColorPickerShader = nullptr;
 
 ColorPicker::ColorPicker(Rectf rect)
 : mRect(rect)
@@ -22,16 +23,16 @@ ColorPicker::ColorPicker(Rectf rect)
 
 void ColorPicker::loadShader()
 {
-    if (!kShaderLoaded) {
-        try {
-            kColorPickerShader = gl::GlslProg( ci::app::loadResource("color_picker.vert"), ci::app::loadResource("color_picker.frag"));
-        }
-        catch( ci::gl::GlslProgCompileExc &exc ) {
-            std::cout << "Shader compile error: " << std::endl;
-            std::cout << exc.what();
-        }
-        kShaderLoaded = true;
-    }
+//    if (!kShaderLoaded) {
+//        try {
+//            kColorPickerShader = gl::GlslProg::create( ci::app::loadResource(RES_COLPICKER_VERT), ci::app::loadResource(RES_COLPICKER_FRAG));
+//        }
+//        catch( ci::gl::GlslProgCompileExc &exc ) {
+//            std::cout << "Shader compile error: " << std::endl;
+//            std::cout << exc.what();
+//        }
+//        kShaderLoaded = true;
+//    }
 }
 
 void ColorPicker::setRect(Rectf rect)
@@ -85,9 +86,9 @@ void ColorPicker::setOpacity(float opacity) {
 
 void ColorPicker::draw()
 {
-    kColorPickerShader.bind();
-    kColorPickerShader.uniform("time", *mHue);
-    kColorPickerShader.uniform("alpha", mAlpha);
-    gl::drawSolidRect(mRect);
-    kColorPickerShader.unbind();
+//    kColorPickerShader->bind();
+//    kColorPickerShader->uniform("time", *mHue);
+//    kColorPickerShader->uniform("alpha", mAlpha);
+//    gl::drawSolidRect(mRect);
+//    kColorPickerShader->unbind();
 }

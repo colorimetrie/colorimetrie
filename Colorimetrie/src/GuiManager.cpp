@@ -139,10 +139,13 @@ void GuiManager::setupStylesGui(float nbShapes,
                                 cmi::CRule* styler)
 {
     int h = 96/2;
-    int w = 365;
+    int w = 388;
     
     mStylesGui->setFont("StagSans-Book.ttf");
     mStylesGui->centerWidgetsHorizontallyOnCanvas();
+    
+    vector<string> names = {"droite", "catmull", "bezier", "spline"};
+    mStylesGui->addWidgetDown(new ciUIRadio(h,h, "Type de courbes", names, CI_UI_ORIENTATION_HORIZONTAL));
     
     mStylesGui->addWidgetDown(new ciUISpacer(w, 1));
     
