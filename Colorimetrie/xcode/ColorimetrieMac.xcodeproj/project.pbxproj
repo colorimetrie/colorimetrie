@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		0097E3E50F3E9819005A4392 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0097E3E40F3E9819005A4392 /* QuickTime.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		00BAE65A0E7ED9C10018A608 /* ColorimetrieMacApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00BAE6590E7ED9C10018A608 /* ColorimetrieMacApp.cpp */; };
+		00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 00CCAF14116A9FEE008396D5 /* CinderApp.icns */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B00E0DA515AA20D800A894E0 /* CShapeGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B00E0DA415AA20D800A894E0 /* CShapeGroup.cpp */; };
+		B01ABCAD16CB330A003EECDC /* CRule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B01ABCAB16CB330A003EECDC /* CRule.cpp */; };
+		B02CBD161682C17D00633D84 /* CEditShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B02CBD141682C17D00633D84 /* CEditShape.cpp */; };
+		B04BBFDA159FB4BB006BE66B /* CColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04BBFD9159FB4BB006BE66B /* CColor.cpp */; };
+		B04BBFE6159FCACE006BE66B /* CColorGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */; };
+		B051A01E16C5D30A00160E99 /* Cairo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B051A01816C5D30A00160E99 /* Cairo.cpp */; };
+		B052B15015CEF537002279F1 /* StagSans-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B052B14F15CEF537002279F1 /* StagSans-Book.ttf */; };
+		B0740309166F00B000A27B99 /* ColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0740308166F00B000A27B99 /* ColorPicker.cpp */; };
+		B074030C166F4EC400A27B99 /* color_picker.frag in Resources */ = {isa = PBXBuildFile; fileRef = B074030A166F4EC400A27B99 /* color_picker.frag */; };
+		B074030D166F4EC400A27B99 /* color_picker.vert in Resources */ = {isa = PBXBuildFile; fileRef = B074030B166F4EC400A27B99 /* color_picker.vert */; };
+		B08A0A5815B8F86200153788 /* NewMedia Fett.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A4F15B8F86200153788 /* NewMedia Fett.ttf */; };
+		B08A0A5915B8F86200153788 /* sliderhandle.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5015B8F86200153788 /* sliderhandle.png */; };
+		B08A0A5A15B8F86200153788 /* sliderhandledown.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5115B8F86200153788 /* sliderhandledown.png */; };
+		B08A0A5B15B8F86200153788 /* sliderprogress.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5215B8F86200153788 /* sliderprogress.png */; };
+		B08A0A5C15B8F86200153788 /* slidertrack.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5315B8F86200153788 /* slidertrack.png */; };
+		B08A0A5D15B8F86200153788 /* toggle.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5415B8F86200153788 /* toggle.png */; };
+		B08A0A5E15B8F86200153788 /* toggledown.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5515B8F86200153788 /* toggledown.png */; };
+		B08A0A5F15B8F86200153788 /* toggleon.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5615B8F86200153788 /* toggleon.png */; };
+		B08A0A6015B8F86200153788 /* toggleover.png in Resources */ = {isa = PBXBuildFile; fileRef = B08A0A5715B8F86200153788 /* toggleover.png */; };
+		B0CDA35E16093E4500E15580 /* GuiManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CDA35D16093E4500E15580 /* GuiManager.cpp */; };
+		B0CF374D158843A80007B323 /* CShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0CF374C158843A80007B323 /* CShape.cpp */; };
+		B0DA39DD16327B32008895AC /* GroupManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0DA39DB16327B32008895AC /* GroupManager.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		0097E3E40F3E9819005A4392 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		00BAE6590E7ED9C10018A608 /* ColorimetrieMacApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorimetrieMacApp.cpp; path = ../src/ColorimetrieMacApp.cpp; sourceTree = SOURCE_ROOT; };
+		00CCAF14116A9FEE008396D5 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = SOURCE_ROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* ColorimetrieMac_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorimetrieMac_Prefix.pch; sourceTree = "<group>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		53E3CDFB0E86099300238D2B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* ColorimetrieMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorimetrieMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00E0DA415AA20D800A894E0 /* CShapeGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CShapeGroup.cpp; path = ../src/CShapeGroup.cpp; sourceTree = "<group>"; };
+		B00E0DA715AA20E800A894E0 /* CShapeGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CShapeGroup.h; path = ../include/CShapeGroup.h; sourceTree = "<group>"; };
+		B01ABCAB16CB330A003EECDC /* CRule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CRule.cpp; path = ../src/CRule.cpp; sourceTree = "<group>"; };
+		B02CBD141682C17D00633D84 /* CEditShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CEditShape.cpp; path = ../src/CEditShape.cpp; sourceTree = "<group>"; };
+		B02CBD181682C1A000633D84 /* CEditShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CEditShape.h; path = ../include/CEditShape.h; sourceTree = "<group>"; };
+		B04BBFD9159FB4BB006BE66B /* CColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CColor.cpp; path = ../src/CColor.cpp; sourceTree = "<group>"; };
+		B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CColorGroup.cpp; path = ../src/CColorGroup.cpp; sourceTree = "<group>"; };
+		B0519FFC16C5D30A00160E99 /* Cairo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cairo.h; sourceTree = "<group>"; };
+		B051A01816C5D30A00160E99 /* Cairo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cairo.cpp; sourceTree = "<group>"; };
+		B051A06B16C5DD1200160E99 /* ciUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUI.h; sourceTree = "<group>"; };
+		B051A06C16C5DD1200160E99 /* ciUI2DPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUI2DPad.h; sourceTree = "<group>"; };
+		B051A06D16C5DD1200160E99 /* ciUIBiLabelSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIBiLabelSlider.h; sourceTree = "<group>"; };
+		B051A06E16C5DD1200160E99 /* ciUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIButton.h; sourceTree = "<group>"; };
+		B051A06F16C5DD1200160E99 /* ciUICanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUICanvas.h; sourceTree = "<group>"; };
+		B051A07016C5DD1200160E99 /* ciUICircleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUICircleSlider.h; sourceTree = "<group>"; };
+		B051A07116C5DD1200160E99 /* ciUIDropDownList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIDropDownList.h; sourceTree = "<group>"; };
+		B051A07216C5DD1200160E99 /* ciUIEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIEvent.h; sourceTree = "<group>"; };
+		B051A07316C5DD1200160E99 /* ciUIFPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIFPS.h; sourceTree = "<group>"; };
+		B051A07416C5DD1200160E99 /* ciUIFPSSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIFPSSlider.h; sourceTree = "<group>"; };
+		B051A07516C5DD1200160E99 /* ciUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImage.h; sourceTree = "<group>"; };
+		B051A07616C5DD1200160E99 /* ciUIImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageButton.h; sourceTree = "<group>"; };
+		B051A07716C5DD1200160E99 /* ciUIImageSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageSampler.h; sourceTree = "<group>"; };
+		B051A07816C5DD1200160E99 /* ciUIImageSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageSlider.h; sourceTree = "<group>"; };
+		B051A07916C5DD1200160E99 /* ciUIImageToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIImageToggle.h; sourceTree = "<group>"; };
+		B051A07A16C5DD1200160E99 /* ciUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUILabel.h; sourceTree = "<group>"; };
+		B051A07B16C5DD1200160E99 /* ciUILabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUILabelButton.h; sourceTree = "<group>"; };
+		B051A07C16C5DD1200160E99 /* ciUILabelToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUILabelToggle.h; sourceTree = "<group>"; };
+		B051A07D16C5DD1200160E99 /* ciUIMinimalSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMinimalSlider.h; sourceTree = "<group>"; };
+		B051A07E16C5DD1200160E99 /* ciUIMovingGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMovingGraph.h; sourceTree = "<group>"; };
+		B051A07F16C5DD1200160E99 /* ciUIMultiImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMultiImageButton.h; sourceTree = "<group>"; };
+		B051A08016C5DD1200160E99 /* ciUIMultiImageToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIMultiImageToggle.h; sourceTree = "<group>"; };
+		B051A08116C5DD1200160E99 /* ciUINumberDialer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUINumberDialer.h; sourceTree = "<group>"; };
+		B051A08216C5DD1200160E99 /* ciUIRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRadio.h; sourceTree = "<group>"; };
+		B051A08316C5DD1200160E99 /* ciUIRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRangeSlider.h; sourceTree = "<group>"; };
+		B051A08416C5DD1200160E99 /* ciUIRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRectangle.h; sourceTree = "<group>"; };
+		B051A08516C5DD1200160E99 /* ciUIRotarySlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIRotarySlider.h; sourceTree = "<group>"; };
+		B051A08616C5DD1200160E99 /* ciUIScrollableCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIScrollableCanvas.h; sourceTree = "<group>"; };
+		B051A08716C5DD1200160E99 /* ciUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUISlider.h; sourceTree = "<group>"; };
+		B051A08816C5DD1200160E99 /* ciUISpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUISpacer.h; sourceTree = "<group>"; };
+		B051A08916C5DD1200160E99 /* ciUISpectrum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUISpectrum.h; sourceTree = "<group>"; };
+		B051A08A16C5DD1200160E99 /* ciUITextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUITextInput.h; sourceTree = "<group>"; };
+		B051A08B16C5DD1200160E99 /* ciUIToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIToggle.h; sourceTree = "<group>"; };
+		B051A08C16C5DD1200160E99 /* ciUIToggleMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIToggleMatrix.h; sourceTree = "<group>"; };
+		B051A08D16C5DD1200160E99 /* ciUIWaveform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIWaveform.h; sourceTree = "<group>"; };
+		B051A08E16C5DD1200160E99 /* ciUIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIWidget.h; sourceTree = "<group>"; };
+		B051A08F16C5DD1200160E99 /* ciUIWidgetWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ciUIWidgetWithLabel.h; sourceTree = "<group>"; };
+		B052B14F15CEF537002279F1 /* StagSans-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "StagSans-Book.ttf"; path = "../resources/StagSans-Book.ttf"; sourceTree = "<group>"; };
+		B067BA4E160A35890079677E /* ColorimetrieMacApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; name = ColorimetrieMacApp.h; path = ../include/ColorimetrieMacApp.h; sourceTree = "<group>"; };
+		B07402DD166ECEF200A27B99 /* GUI-Btn-Curve-CatMull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-Btn-Curve-CatMull.png"; sourceTree = "<group>"; };
+		B07402DF166ECEF200A27B99 /* GUI-Btn-Curve-CatMullon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-Btn-Curve-CatMullon.png"; sourceTree = "<group>"; };
+		B07402E0166ECEF200A27B99 /* GUI-Btn-Curve-CatMullover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-Btn-Curve-CatMullover.png"; sourceTree = "<group>"; };
+		B07402E7166ED47800A27B99 /* GUI-Btn-Curve-CatMulldown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GUI-Btn-Curve-CatMulldown.png"; sourceTree = "<group>"; };
+		B0740306166F00A600A27B99 /* ColorPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ColorPicker.h; path = ../include/ColorPicker.h; sourceTree = "<group>"; };
+		B0740308166F00B000A27B99 /* ColorPicker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ColorPicker.cpp; path = ../src/ColorPicker.cpp; sourceTree = "<group>"; };
+		B074030A166F4EC400A27B99 /* color_picker.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = color_picker.frag; path = ../resources/color_picker.frag; sourceTree = "<group>"; };
+		B074030B166F4EC400A27B99 /* color_picker.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = color_picker.vert; path = ../resources/color_picker.vert; sourceTree = "<group>"; };
+		B08A0A4F15B8F86200153788 /* NewMedia Fett.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewMedia Fett.ttf"; sourceTree = "<group>"; };
+		B08A0A5015B8F86200153788 /* sliderhandle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderhandle.png; sourceTree = "<group>"; };
+		B08A0A5115B8F86200153788 /* sliderhandledown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderhandledown.png; sourceTree = "<group>"; };
+		B08A0A5215B8F86200153788 /* sliderprogress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderprogress.png; sourceTree = "<group>"; };
+		B08A0A5315B8F86200153788 /* slidertrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slidertrack.png; sourceTree = "<group>"; };
+		B08A0A5415B8F86200153788 /* toggle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggle.png; sourceTree = "<group>"; };
+		B08A0A5515B8F86200153788 /* toggledown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggledown.png; sourceTree = "<group>"; };
+		B08A0A5615B8F86200153788 /* toggleon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggleon.png; sourceTree = "<group>"; };
+		B08A0A5715B8F86200153788 /* toggleover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toggleover.png; sourceTree = "<group>"; };
+		B0995C0E15744FA900ECB3BF /* CColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CColor.h; path = ../include/CColor.h; sourceTree = "<group>"; };
+		B0B788001575D6CB00D5ACB4 /* CColorGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CColorGroup.h; path = ../include/CColorGroup.h; sourceTree = "<group>"; };
+		B0CDA35B16093E2400E15580 /* GuiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuiManager.h; path = ../include/GuiManager.h; sourceTree = "<group>"; };
+		B0CDA35D16093E4500E15580 /* GuiManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GuiManager.cpp; path = ../src/GuiManager.cpp; sourceTree = "<group>"; };
+		B0CF374C158843A80007B323 /* CShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CShape.cpp; path = ../src/CShape.cpp; sourceTree = "<group>"; };
+		B0CF374F158843CF0007B323 /* CShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CShape.h; path = ../include/CShape.h; sourceTree = "<group>"; };
+		B0DA39DB16327B32008895AC /* GroupManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GroupManager.cpp; path = ../src/GroupManager.cpp; sourceTree = "<group>"; };
+		B0DA39DF16327B52008895AC /* GroupManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GroupManager.h; path = ../include/GroupManager.h; sourceTree = "<group>"; };
+		B0FB301816CAD58B00E6DFF8 /* CRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CRule.h; path = ../include/CRule.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */,
+				0097E3E50F3E9819005A4392 /* QuickTime.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B04BBFD9159FB4BB006BE66B /* CColor.cpp */,
+				B0CF374C158843A80007B323 /* CShape.cpp */,
+				00BAE6590E7ED9C10018A608 /* ColorimetrieMacApp.cpp */,
+				B04BBFE5159FCACE006BE66B /* CColorGroup.cpp */,
+				B00E0DA415AA20D800A894E0 /* CShapeGroup.cpp */,
+				B0CDA35D16093E4500E15580 /* GuiManager.cpp */,
+				B0DA39DB16327B32008895AC /* GroupManager.cpp */,
+				B0740308166F00B000A27B99 /* ColorPicker.cpp */,
+				B02CBD141682C17D00633D84 /* CEditShape.cpp */,
+				B01ABCAB16CB330A003EECDC /* CRule.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				0097E3E40F3E9819005A4392 /* QuickTime.framework */,
+				5323E6B50EAFCA7E003A9687 /* QTKit.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				53E3CDFB0E86099300238D2B /* Carbon.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* ColorimetrieMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ColorimetrieMac */ = {
+			isa = PBXGroup;
+			children = (
+				B0519FCE16C5D20500160E99 /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = ColorimetrieMac;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB301816CAD58B00E6DFF8 /* CRule.h */,
+				32CA4F630368D1EE00C91783 /* ColorimetrieMac_Prefix.pch */,
+				B0CF374F158843CF0007B323 /* CShape.h */,
+				B02CBD181682C1A000633D84 /* CEditShape.h */,
+				B0995C0E15744FA900ECB3BF /* CColor.h */,
+				B0B788001575D6CB00D5ACB4 /* CColorGroup.h */,
+				B00E0DA715AA20E800A894E0 /* CShapeGroup.h */,
+				B0CDA35B16093E2400E15580 /* GuiManager.h */,
+				B067BA4E160A35890079677E /* ColorimetrieMacApp.h */,
+				B0DA39DF16327B52008895AC /* GroupManager.h */,
+				B0740306166F00A600A27B99 /* ColorPicker.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B074030A166F4EC400A27B99 /* color_picker.frag */,
+				B074030B166F4EC400A27B99 /* color_picker.vert */,
+				B052B14F15CEF537002279F1 /* StagSans-Book.ttf */,
+				B08A0A4E15B8F86200153788 /* ciUIresources */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				00CCAF14116A9FEE008396D5 /* CinderApp.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0519FCE16C5D20500160E99 /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				B0519FF816C5D30A00160E99 /* Cairo */,
+				B051A06A16C5DD1200160E99 /* ciUI */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		B0519FF816C5D30A00160E99 /* Cairo */ = {
+			isa = PBXGroup;
+			children = (
+				B0519FF916C5D30A00160E99 /* include */,
+				B051A01716C5D30A00160E99 /* src */,
+			);
+			name = Cairo;
+			path = ../blocks/Cairo;
+			sourceTree = "<group>";
+		};
+		B0519FF916C5D30A00160E99 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B0519FFA16C5D30A00160E99 /* cinder */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B0519FFA16C5D30A00160E99 /* cinder */ = {
+			isa = PBXGroup;
+			children = (
+				B0519FFB16C5D30A00160E99 /* cairo */,
+			);
+			path = cinder;
+			sourceTree = "<group>";
+		};
+		B0519FFB16C5D30A00160E99 /* cairo */ = {
+			isa = PBXGroup;
+			children = (
+				B0519FFC16C5D30A00160E99 /* Cairo.h */,
+			);
+			path = cairo;
+			sourceTree = "<group>";
+		};
+		B051A01716C5D30A00160E99 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B051A01816C5D30A00160E99 /* Cairo.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		B051A06A16C5DD1200160E99 /* ciUI */ = {
+			isa = PBXGroup;
+			children = (
+				B051A06B16C5DD1200160E99 /* ciUI.h */,
+				B051A06C16C5DD1200160E99 /* ciUI2DPad.h */,
+				B051A06D16C5DD1200160E99 /* ciUIBiLabelSlider.h */,
+				B051A06E16C5DD1200160E99 /* ciUIButton.h */,
+				B051A06F16C5DD1200160E99 /* ciUICanvas.h */,
+				B051A07016C5DD1200160E99 /* ciUICircleSlider.h */,
+				B051A07116C5DD1200160E99 /* ciUIDropDownList.h */,
+				B051A07216C5DD1200160E99 /* ciUIEvent.h */,
+				B051A07316C5DD1200160E99 /* ciUIFPS.h */,
+				B051A07416C5DD1200160E99 /* ciUIFPSSlider.h */,
+				B051A07516C5DD1200160E99 /* ciUIImage.h */,
+				B051A07616C5DD1200160E99 /* ciUIImageButton.h */,
+				B051A07716C5DD1200160E99 /* ciUIImageSampler.h */,
+				B051A07816C5DD1200160E99 /* ciUIImageSlider.h */,
+				B051A07916C5DD1200160E99 /* ciUIImageToggle.h */,
+				B051A07A16C5DD1200160E99 /* ciUILabel.h */,
+				B051A07B16C5DD1200160E99 /* ciUILabelButton.h */,
+				B051A07C16C5DD1200160E99 /* ciUILabelToggle.h */,
+				B051A07D16C5DD1200160E99 /* ciUIMinimalSlider.h */,
+				B051A07E16C5DD1200160E99 /* ciUIMovingGraph.h */,
+				B051A07F16C5DD1200160E99 /* ciUIMultiImageButton.h */,
+				B051A08016C5DD1200160E99 /* ciUIMultiImageToggle.h */,
+				B051A08116C5DD1200160E99 /* ciUINumberDialer.h */,
+				B051A08216C5DD1200160E99 /* ciUIRadio.h */,
+				B051A08316C5DD1200160E99 /* ciUIRangeSlider.h */,
+				B051A08416C5DD1200160E99 /* ciUIRectangle.h */,
+				B051A08516C5DD1200160E99 /* ciUIRotarySlider.h */,
+				B051A08616C5DD1200160E99 /* ciUIScrollableCanvas.h */,
+				B051A08716C5DD1200160E99 /* ciUISlider.h */,
+				B051A08816C5DD1200160E99 /* ciUISpacer.h */,
+				B051A08916C5DD1200160E99 /* ciUISpectrum.h */,
+				B051A08A16C5DD1200160E99 /* ciUITextInput.h */,
+				B051A08B16C5DD1200160E99 /* ciUIToggle.h */,
+				B051A08C16C5DD1200160E99 /* ciUIToggleMatrix.h */,
+				B051A08D16C5DD1200160E99 /* ciUIWaveform.h */,
+				B051A08E16C5DD1200160E99 /* ciUIWidget.h */,
+				B051A08F16C5DD1200160E99 /* ciUIWidgetWithLabel.h */,
+			);
+			path = ciUI;
+			sourceTree = "<group>";
+		};
+		B08A0A4E15B8F86200153788 /* ciUIresources */ = {
+			isa = PBXGroup;
+			children = (
+				B07402DD166ECEF200A27B99 /* GUI-Btn-Curve-CatMull.png */,
+				B07402E7166ED47800A27B99 /* GUI-Btn-Curve-CatMulldown.png */,
+				B07402DF166ECEF200A27B99 /* GUI-Btn-Curve-CatMullon.png */,
+				B07402E0166ECEF200A27B99 /* GUI-Btn-Curve-CatMullover.png */,
+				B08A0A4F15B8F86200153788 /* NewMedia Fett.ttf */,
+				B08A0A5015B8F86200153788 /* sliderhandle.png */,
+				B08A0A5115B8F86200153788 /* sliderhandledown.png */,
+				B08A0A5215B8F86200153788 /* sliderprogress.png */,
+				B08A0A5315B8F86200153788 /* slidertrack.png */,
+				B08A0A5415B8F86200153788 /* toggle.png */,
+				B08A0A5515B8F86200153788 /* toggledown.png */,
+				B08A0A5615B8F86200153788 /* toggleon.png */,
+				B08A0A5715B8F86200153788 /* toggleover.png */,
+			);
+			name = ciUIresources;
+			path = ../resources/ciUIresources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* ColorimetrieMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ColorimetrieMac" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorimetrieMac;
+			productInstallPath = "$(HOME)/Applications";
+			productName = ColorimetrieMac;
+			productReference = 8D1107320486CEB800E47090 /* ColorimetrieMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ColorimetrieMac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ColorimetrieMac */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* ColorimetrieMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CCAF15116A9FEE008396D5 /* CinderApp.icns in Resources */,
+				B08A0A5815B8F86200153788 /* NewMedia Fett.ttf in Resources */,
+				B08A0A5915B8F86200153788 /* sliderhandle.png in Resources */,
+				B08A0A5A15B8F86200153788 /* sliderhandledown.png in Resources */,
+				B08A0A5B15B8F86200153788 /* sliderprogress.png in Resources */,
+				B08A0A5C15B8F86200153788 /* slidertrack.png in Resources */,
+				B08A0A5D15B8F86200153788 /* toggle.png in Resources */,
+				B08A0A5E15B8F86200153788 /* toggledown.png in Resources */,
+				B08A0A5F15B8F86200153788 /* toggleon.png in Resources */,
+				B08A0A6015B8F86200153788 /* toggleover.png in Resources */,
+				B052B15015CEF537002279F1 /* StagSans-Book.ttf in Resources */,
+				B074030C166F4EC400A27B99 /* color_picker.frag in Resources */,
+				B074030D166F4EC400A27B99 /* color_picker.vert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00BAE65A0E7ED9C10018A608 /* ColorimetrieMacApp.cpp in Sources */,
+				B0CF374D158843A80007B323 /* CShape.cpp in Sources */,
+				B04BBFDA159FB4BB006BE66B /* CColor.cpp in Sources */,
+				B04BBFE6159FCACE006BE66B /* CColorGroup.cpp in Sources */,
+				B00E0DA515AA20D800A894E0 /* CShapeGroup.cpp in Sources */,
+				B0CDA35E16093E4500E15580 /* GuiManager.cpp in Sources */,
+				B0DA39DD16327B32008895AC /* GroupManager.cpp in Sources */,
+				B0740309166F00B000A27B99 /* ColorPicker.cpp in Sources */,
+				B02CBD161682C17D00633D84 /* CEditShape.cpp in Sources */,
+				B051A01E16C5D30A00160E99 /* Cairo.cpp in Sources */,
+				B01ABCAD16CB330A003EECDC /* CRule.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = ../../../../cinder_0.8.5_mac;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ColorimetrieMac_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Cairo/lib/macosx\"",
+					"\"$(SRCROOT)/Cairo/lib/msw\"",
+					"\"$(SRCROOT)/../blocks/Cairo/lib/macosx\"",
+					"\"$(SRCROOT)/../blocks/Cairo/lib/msw\"",
+				);
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					../blocks/Cairo/lib/macosx/libcairo.a,
+					"../blocks/Cairo/lib/macosx/libpixman-1.a",
+					../blocks/Cairo/lib/macosx/libpng14.a,
+				);
+				PRODUCT_NAME = ColorimetrieMac;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = ../../../../cinder_0.8.5_mac;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ColorimetrieMac_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Cairo/lib/macosx\"",
+					"\"$(SRCROOT)/Cairo/lib/msw\"",
+					"\"$(SRCROOT)/../blocks/Cairo/lib/macosx\"",
+					"\"$(SRCROOT)/../blocks/Cairo/lib/msw\"",
+				);
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder.a\"",
+					../blocks/Cairo/lib/macosx/libcairo.a,
+					"../blocks/Cairo/lib/macosx/libpixman-1.a",
+					../blocks/Cairo/lib/macosx/libpng14.a,
+				);
+				PRODUCT_NAME = ColorimetrieMac;
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CINDER_PATH = ../../../cinder_0.8.5_mac;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					../blocks/Cairo/include/macosx,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					../blocks/Cairo/lib/macosx/libcairo.a,
+					"../blocks/Cairo/lib/macosx/libpixman-1.a",
+					../blocks/Cairo/lib/macosx/libpng14.a,
+				);
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/Cairo/include ../blocks/ciUI/";
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CINDER_PATH = ../../../cinder_0.8.5_mac;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					../blocks/Cairo/include/macosx,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					../blocks/Cairo/lib/macosx/libcairo.a,
+					"../blocks/Cairo/lib/macosx/libpixman-1.a",
+					../blocks/Cairo/lib/macosx/libpng14.a,
+				);
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/Cairo/include ../blocks/ciUI/";
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "ColorimetrieMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ColorimetrieMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
